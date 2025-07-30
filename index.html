@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="tr"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Alper Süzen – Game &amp; Level Designer&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Alper Süzen'in oyunlaştırılmış portfolio sayfası – dijital oyun tasarımı, 3D modelleme, level design"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0a0a0a;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg2:#1a1a1d;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent:#00ffc8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--accent2:#ff4fa7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text:#f2f2f2;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{margin:0;padding:0;box-sizing:border-box;font-family:var(--font)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{background:var(--bg);color:var(--text);overflow-x:hidden}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>::selection{background:var(--accent);color:var(--bg)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#loader{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#loader h2{animation:pulse 1.2s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#cursor{position:fixed;width:20px;height:20px;border:2px solid var(--accent);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);z-index:9998;transition:transform .1s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.particle{position:absolute;width:5px;height:5px;background:var(--accent);border-radius:50%;pointer-events:none;animation:fadeOut .8s forwards}@keyframes fadeOut{to{opacity:0;transform:scale(0)}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.layer{position:absolute;top:0;left:0;width:100%;min-height:100vh;padding:6vmin;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .6s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.layer.active{opacity:1;z-index:10}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--accent);margin-bottom:.5rem}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.subtitle{font-size:1.1rem;color:var(--accent2);margin-bottom:2rem}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:1rem}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card{background:var(--bg2);border:2px solid transparent;border-radius:12px;padding:22px;transition:.3s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card:hover{border-color:var(--accent);transform:translateY(-6px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card img{width:100%;border-radius:8px;margin-bottom:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card h3{margin-bottom:.4rem;color:var(--accent);font-size:1.2rem}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card p{font-size:.9rem;line-height:1.4;opacity:.85}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.aboutText{max-width:700px;font-size:1.05rem;line-height:1.6}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.aboutText b{color:var(--accent)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact a{color:var(--accent);text-decoration:none;margin-right:18px;font-weight:600;font-size:1rem}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact a:hover{color:var(--accent2)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button{margin-top:2rem;background:transparent;border:2px solid var(--accent);color:var(--accent);padding:.6rem 1.2rem;border-radius:6px;cursor:pointer;font-size:1rem;transition:.3s}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover{background:var(--accent);color:var(--bg)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:600px){.layer{padding:4vmin}}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Loading --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="loader"&gt;&lt;h2&gt;Level-0 yükleniyor…&lt;/h2&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="cursor"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Ana Alan --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="gameCanvas"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 1. ANA MENÜ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="menu" class="layer active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Merhaba, &lt;span style="color:var(--accent2);cursor:pointer" onclick="startGame()"&gt;gezgin!&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="subtitle"&gt;Ben Alper – 22 yaşındayım, İstanbul Beykent Üniversitesi Dijital Oyun Tasarımı öğrencisiyim. Klavyenin &lt;b&gt;yön tuşları&lt;/b&gt; ile hareket et, &lt;b&gt;boşluk&lt;/b&gt; ile etkileşime geç.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 2. PORTFOLIO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="portfolio" class="layer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Projelerim&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://i.imgur.com/9I5x8nJ.png" alt="Karanlık Orman"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Karanlık Orman – Mobil Oyun&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Unity &amp; Blender ile geliştirdiğim sonsuz-roguelike mobil oyun. Odak: “karanlık” mekânda ışık yönetimi ve stres yaratımı.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://i.imgur.com/4X6tBzW.png" alt="Low-Poly Ev"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Low-Poly Ev Serisi – 3D Asset&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Blender’da modellediğim 12 adet low-poly yapı kiti. Unity Asset Store’da 2.800+ indirme.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://i.imgur.com/OVj9k7e.png" alt="Bitsy Jam"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;“Kayıp Sinyaller” – Bitsy Jam&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;48 saatte üretilen atmosferik mini-macera. Tema: “kayıp sinyaller”. 240+ oyuncu oynadı.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="showLayer('menu')"&gt;Geri dön&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 3. ABOUT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="about" class="layer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Hikâyem&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="aboutText"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Oyun oynamayı &lt;b&gt;7 yaşımda&lt;/b&gt; başladım, &lt;b&gt;17 yaşımda&lt;/b&gt; oyun &lt;i&gt;yapmaya&lt;/i&gt; başladım.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>Şu anda &lt;b&gt;İstanbul Beykent Üniversitesi Dijital Oyun Tasarımı&lt;/b&gt; 3. sınıf öğrencisiyim. <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;br&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;b&gt;Blender&lt;/b&gt; ile 3D modelleme, &lt;b&gt;Unity&lt;/b&gt; ile oyun mekaniği ve &lt;b&gt;level design&lt;/b&gt; üzerine odaklanıyorum. <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>Karanlık atmosferler, minimalist düzenler ve “keşfetme” hissiyatı üretmek beni tetikliyor. <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;br&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Bu siteyi kendime bir “ilk seviye” gibi tasarladım; aşağıdaki düğmelerle birlikte ilerleyebiliriz.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="showLayer('menu')"&gt;Geri dön&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 4. CONTACT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact" class="layer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;İletişim&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="mailto:alper.suzen@email.com"&gt;📧 Mail&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://linkedin.com/in/alper-süzen" target="_blank"&gt;💼 LinkedIn&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://alpersuzen.itch.io" target="_blank"&gt;🎮 Itch.io&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="https://github.com/alpersuzen" target="_blank"&gt;🐱 GitHub&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="showLayer('menu')"&gt;Geri dön&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* ---------- KOD ---------- */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentLayer = 'menu';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const cursor = document.getElementById('cursor');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const loader <span class="Apple-converted-space">  </span>= document.getElementById('loader');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('load', () =&gt; setTimeout(()=&gt;loader.style.display='none', 1000));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('mousemove', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor.style.left = e.clientX + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor.style.top<span class="Apple-converted-space">  </span>= e.clientY + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(Math.random() &lt; .3) createParticle(e.clientX, e.clientY);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function createParticle(x,y){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const p = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>p.classList.add('particle');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>p.style.left = x + 'px'; p.style.top = y + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.appendChild(p);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(()=&gt;p.remove(),800);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showLayer(id){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.layer').forEach(l=&gt;l.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById(id).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentLayer = id;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function startGame(){ showLayer('portfolio'); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener('keydown', e=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>switch(e.key){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>case 'ArrowRight': if(currentLayer==='menu') showLayer('portfolio'); break;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>case 'ArrowLeft':<span class="Apple-converted-space">  </span>showLayer('menu'); break;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>case 'ArrowUp':<span class="Apple-converted-space">    </span>if(currentLayer==='menu') showLayer('about'); break;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>case 'ArrowDown':<span class="Apple-converted-space">  </span>if(currentLayer==='menu') showLayer('contact'); break;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>case ' ': e.preventDefault(); if(currentLayer==='menu') startGame(); break;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
